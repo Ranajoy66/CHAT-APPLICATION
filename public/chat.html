@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nexus Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+
+    <div class="sidebar-header">
+      <div class="logo-box small">💬</div>
+      <div id="chat-header">
+        <div class="title">Nexus Chat</div>
+        <div class="sub">General Room</div>
+      </div>
+    </div>
+
+    <div class="online-title">
+      ONLINE — <span id="online-count">0</span>
+    </div>
+
+    <div id="users"></div>
+
+    <div class="me" id="me"></div>
+
+  </div>
+
+  <!-- Chat -->
+  <div class="chat">
+
+    <div class="chat-header">
+      <div>
+        <div class="channel"># general</div>
+        <!-- <div class="sub">Real-time chat powered by Socket.IO</div> -->
+      </div>
+
+      <div class="status-box">
+        <span class="dot"></span> Connected
+        <span class="badge" id="online-badge">0 online</span>
+      </div>
+    </div>
+
+    <div id="messages" class="messages"></div>
+
+    <div id="typing" class="typing"></div>
+
+    <form id="form" class="input-box">
+      <input id="input" placeholder="Message..." autocomplete="off">
+      <button>➤</button>
+    </form>
+
+  </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

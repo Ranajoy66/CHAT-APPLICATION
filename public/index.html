@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nexus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+
+<div class="login-card">
+
+  <div class="logo-box">💬</div>
+
+  <h1>Welcome to Nexus</h1>
+  <!-- <p>Real-time chat powered by Socket.IO</p> -->
+
+  <label>YOUR DISPLAY NAME</label>
+
+  <input id="username" placeholder="Enter your name..." autocomplete="off" />
+
+  <button onclick="enterChat()">Enter Chat →</button>
+
+</div>
+
+<script>
+function enterChat(){
+  const name = document.getElementById("username").value;
+  if(name){
+    localStorage.setItem("username", name);
+    window.location.href = "chat.html";
+  }
+}
+</script>
+
+</body>
+</html>
